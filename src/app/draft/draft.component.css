@@ -1,0 +1,13 @@
+:host {
+  display: block;
+  background-color: #ccc;
+  padding: 1em 0;
+}
+
+p:first-child {
+  margin-top: 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
