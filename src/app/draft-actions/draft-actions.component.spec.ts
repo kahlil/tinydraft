@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { DraftMetadataComponent } from './draft-metadata.component';
+import { DraftActionsComponent } from './draft-actions.component';
 
-describe('DraftMetadataComponent', () => {
-  let component: DraftMetadataComponent;
-  let fixture: ComponentFixture<DraftMetadataComponent>;
+describe('DraftActionsComponent', () => {
+  let component: DraftActionsComponent;
+  let fixture: ComponentFixture<DraftActionsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DraftMetadataComponent ]
+      declarations: [ DraftActionsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DraftMetadataComponent);
+    fixture = TestBed.createComponent(DraftActionsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

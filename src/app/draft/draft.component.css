@@ -1,7 +1,12 @@
 :host {
   display: block;
-  background-color: #ccc;
-  padding: 1em 0;
+  /*background-color: #e4e4e4;*/
+  padding: 1em 1em 0 1em;
+  border-bottom: 1px solid #ccc;
+}
+
+:host:last-child {
+  border-bottom: 0;
 }
 
 p:first-child {
