@@ -1,5 +1,11 @@
-<p>
-  {{ draft.text }}
-</p>
-<app-draft-actions></app-draft-actions>
-
+<div class="inner-container">
+  <div class="draft-text"
+    (click)="editDraft(draft.id)">
+    {{ text }}
+  </div>
+  <app-draft-actions
+    [draft]="draft"
+    (favDraftClick)="toggleFav(draft)"
+    (deleteDraftClick)="deleteDraft($event)">
+  </app-draft-actions>
+</div>

@@ -4,12 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { FlexLayoutModule } from '@angular/flex-layout';
 import { AppComponent } from './app.component';
 import { DraftComponent } from './draft/draft.component';
 import { DraftslistComponent } from './draftslist/draftslist.component';
 import { DraftActionsComponent } from './draft-actions/draft-actions.component';
 import { TitleComponent } from './title/title.component';
 import { tinydraftRoutes } from './app.routes';
+import { EditorComponent } from './editor/editor.component';
+import { DraftResolve, EmptyDraftResolve, DraftsListResolve } from './drafts.resolve';
+import { DraftsService } from './drafts.service';
 
 @NgModule({
   declarations: [
@@ -17,15 +21,22 @@ import { tinydraftRoutes } from './app.routes';
     DraftComponent,
     DraftslistComponent,
     DraftActionsComponent,
-    TitleComponent
+    TitleComponent,
+    EditorComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
     RouterModule.forRoot(tinydraftRoutes),
+    FlexLayoutModule,
   ],
-  providers: [],
+  providers: [
+    DraftResolve,
+    DraftsListResolve,
+    EmptyDraftResolve,
+    DraftsService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

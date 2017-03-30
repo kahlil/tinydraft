@@ -1,0 +1,33 @@
+:host {
+  height: 3em;
+  position: absolute;
+  bottom: .3em;
+  right: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: #aaa;
+  opacity: .6;
+}
+
+a:hover {
+  opacity: 1;
+}
+
+ul {
+  margin-bottom: 0;
+  padding-bottom: 1em;
+}
+
+.fav {
+  background: none;
+  padding: 0;
+  margin: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.faved {
+  color: hotpink;
+}

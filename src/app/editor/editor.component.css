@@ -1,0 +1,17 @@
+textarea {
+  min-height: 250px;
+  border: 1px solid  #07b6ff;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  background-color: #383838;
+  color: #ccc;
+  width: 100%;
+}
+
+.save-draft {
+  text-align: center;
+  display: inline-block;
+  background-color: #07b6ff;
+  border: none;
+}

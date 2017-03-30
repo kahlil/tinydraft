@@ -1,4 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, Input, Output, OnInit, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
+import { DraftsService } from '../drafts.service';
+import { CSS } from './draft.component.styles';
 
 @Component({
   selector: 'app-draft',
@@ -7,8 +10,31 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class DraftComponent implements OnInit {
   @Input() draft;
+  @Output() deleteDraftClick = new EventEmitter();
+  text: string;
 
-  constructor() { }
+  constructor(
+    private draftsService: DraftsService,
+    private router: Router
+  ) { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    const words = this.draft.text.match(/\S+/g);
+    const text = words.filter((word, i) => i <= 30).join(' ');
+    this.text = words.length > 30 ? text + '...' : text;
+    // this.text = this.draft.text;
+  }
+
+  toggleFav() {
+    this.draft.faved = !this.draft.faved;
+    this.draftsService.saveDraft(this.draft);
+  }
+
+  editDraft(id) {
+    this.router.navigate(['edit', id]);
+  }
+
+  deleteDraft(id) {
+    this.deleteDraftClick.emit(id);
+  }
 }

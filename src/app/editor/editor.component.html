@@ -1,0 +1,8 @@
+<app-title
+  [style.xs]="{ 'display': 'none' }"
+  [style.sm]="{ 'display': 'none' }">
+</app-title>
+<textarea class="p2" [(ngModel)]="draft.text"></textarea>
+<div class="right-align">
+  <button class="save-draft" (click)="saveDraft()">save</button>
+</div>

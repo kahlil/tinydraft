@@ -1,4 +1,27 @@
+:host {
+  display: block;
+  padding-bottom: 1em;
+}
+
 .h1 {
-  font-weight: 500;
+  font-weight: 400;
+  text-align: center;
+  font-size: 2rem;
+  color: #07b6ff;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  padding-top: 2.5rem;
+  line-height: 2.2rem;
+}
+
+.drafts-actions {
+  text-align: center;
+  font-weight: 300;
+  padding-bottom: 1rem;
+}
+
+.drafts-actions a {
+  color: hotpink;
+  border-bottom: 1px solid hotpink;
   text-align: center;
 }

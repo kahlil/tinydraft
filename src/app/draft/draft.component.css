@@ -1,12 +1,9 @@
 :host {
   display: block;
-  /*background-color: #e4e4e4;*/
-  padding: 1em 1em 0 1em;
-  border-bottom: 1px solid #ccc;
-}
-
-:host:last-child {
-  border-bottom: 0;
+  background-color: #383838;
+  position: relative;
+  min-width: 25%;
+  border: .5em solid #222;
 }
 
 p:first-child {
@@ -15,4 +12,20 @@ p:first-child {
 
 p:last-child {
   margin-bottom: 0;
+}
+
+.draft-text {
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.inner-container {
+  box-sizing: border-box;
+  padding: 1em 1em 2em 1em;
+  height: 100%;
+  width: 100%;
+  border: 1px solid #383838;
+}
+.inner-container:hover {
+  border: 1px solid #07b6ff;
 }

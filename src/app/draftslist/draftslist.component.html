@@ -1,1 +1,14 @@
-<app-draft *ngFor="let draft of drafts" [draft]="draft"></app-draft>
+<app-title></app-title>
+
+<div class="drafts-container"
+  fxLayoutWrap="wrap"
+  fxLayout="row"
+  fxLayout.sm="column"
+  fxLayout.xs="column">
+  <app-draft class="draft rounded"
+    (deleteDraftClick)="deleteDraft($event)"
+    *ngFor="let draft of drafts"
+    [draft]="draft"
+    fxFlex>
+  </app-draft>
+</div>

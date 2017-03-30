@@ -1,6 +1,8 @@
 :host {
   display: block;
   border-color: #ccc;
-  background-color: #e4e4e4;
-  /*border-radius: 5px;*/
+}
+
+.drafts-container {
+  padding: .5em;
 }

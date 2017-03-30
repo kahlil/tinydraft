@@ -1,8 +1,18 @@
 <ul class="list-reset">
   <li class="inline-block">
-    <a href="">edit</a>
+    <a [routerLink]="['/edit', draft.id]">edit</a>
+  </li>
+  <li class="inline-block">
+    <a (click)="deleteDraft(draft.id)">delete</a>
   </li>
   <li class="inline-block">
     <a href="">tweet</a>
+  </li>
+  <li class="inline-block">
+    <a class="fav"
+      [ngClass]="{ faved: draft.faved }"
+      (click)="favDraft(draft.id)">
+      ★
+    </a>
   </li>
 </ul>

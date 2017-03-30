@@ -1,15 +1,20 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-draft-actions',
   templateUrl: './draft-actions.component.html',
   styleUrls: ['./draft-actions.component.css']
 })
-export class DraftActionsComponent implements OnInit {
+export class DraftActionsComponent {
+  @Input() draft;
+  @Output() favDraftClick = new EventEmitter();
+  @Output() deleteDraftClick = new EventEmitter();
 
-  constructor() { }
-
-  ngOnInit() {
+  favDraft(id) {
+    return this.favDraftClick.emit();
   }
 
+  deleteDraft(id) {
+    return this.deleteDraftClick.emit(id);
+  }
 }
