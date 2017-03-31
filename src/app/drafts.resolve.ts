@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { DraftsService } from './drafts.service';
+import { Draft } from './app.interface';
 
 @Injectable()
 export class DraftsListResolve {
@@ -16,7 +17,7 @@ export class DraftResolve implements Resolve<any> {
   constructor(private draftsService: DraftsService) {}
 
   resolve(route: ActivatedRouteSnapshot) {
-    return this.draftsService.getDraft(route.params['id']);
+    return this.draftsService.getDraft(parseInt(route.params['id'], 10));
   }
 }
 
@@ -24,11 +25,12 @@ export class DraftResolve implements Resolve<any> {
 export class EmptyDraftResolve implements Resolve<any> {
   constructor(private draftsService: DraftsService) {}
 
-  resolve(route: ActivatedRouteSnapshot) {
-    return {
-      id: this.draftsService.getDrafts().length + 1,
-      text: '',
-      date: new Date(),
-    };
+  resolve() {
+    return this.draftsService.getDrafts()
+      .map((drafts: Draft[]) => drafts.reduce((newDraft: Draft, draft: Draft) => {
+          const newDraftUpdated = { ...newDraft, id: draft.id + 1 };
+          return (newDraft.id <= draft.id) ? newDraftUpdated : newDraft;
+        }, { id: 0, text: '', date: new Date() })
+      );
   }
 }

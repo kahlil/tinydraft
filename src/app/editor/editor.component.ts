@@ -22,8 +22,13 @@ export class EditorComponent implements OnInit {
 
   saveDraft() {
     if (this.draft.text !== '') {
-      this.draftsService.saveDraft(this.draft);
+      this.draftsService.saveDraft(this.draft)
+        .subscribe((d) => {
+          console.log(d);
+          this.router.navigateByUrl('/')
+        });
+    } else {
+      this.router.navigateByUrl('/');
     }
-    this.router.navigateByUrl('/');
   }
 }

@@ -10,7 +10,7 @@ import { CSS } from './draft.component.styles';
 })
 export class DraftComponent implements OnInit {
   @Input() draft;
-  @Output() deleteDraftClick = new EventEmitter();
+  @Output() deleteDraftClick: EventEmitter<any> = new EventEmitter();
   text: string;
 
   constructor(

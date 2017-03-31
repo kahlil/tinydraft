@@ -1,90 +1,55 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
-import db from 'localforage';
 
+import { Draft } from './app.interface';
+import db from 'localforage';
 import 'rxjs/add/observable/fromPromise';
+import 'rxjs/add/operator/mergeAll';
+
 
 @Injectable()
 export class DraftsService {
-  drafts = [
-    {
-      id: 1,
-      text: 'This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words.This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words. This is jus a quick jot-down of some words I thought of. Check this out: more words.',
-      date: '1.1.2017',
-    },
-    {
-      id: 2,
-      text: 'A tiny draft for a tweet I thought of.',
-      date: '12.4.2017',
-    },
-    {
-      id: 3,
-      text: 'Something I need to remember for later. Maybe I\'ll send it to myself as a text.',
-      date: '12.2.2017',
-    },
-    {
-      id: 4,
-      text: 'A draft for an email I will send later at 5pm. Bla bla bla bla. That\'s basically what I\'m going to say.',
-      date: '12.12.2017',
-    },
-    {
-      id: 5,
-      text: 'A tiny draft for a tweet I thought of.',
-      date: '12.4.2017',
-    },
-    {
-      id: 6,
-      text: 'Something I need to remember for later. Maybe I\'ll send it to myself as a text.',
-      date: '12.2.2017',
-    },
-    {
-      id: 7,
-      text: 'A draft for an email I will send later at 5pm. Bla bla bla bla. That\'s basically what I\'m going to say.',
-      date: '12.12.2017',
-    },
-    {
-      id: 8,
-      text: 'A tiny draft for a tweet I thought of.',
-      date: '12.4.2017',
-    },
-    {
-      id: 9,
-      text: 'Something I need to remember for later. Maybe I\'ll send it to myself as a text.',
-      date: '12.2.2017',
-    },
-    {
-      id: 10,
-      text: 'A draft for an email I will send later at 5pm. Bla bla bla bla. That\'s basically what I\'m going to say.',
-      date: '12.12.2017',
-    }
-  ].reverse();
-
-  getDraft(id) {
-    const drafts$ = Observable.fromPromise(db.getItem('drafts'));
-    // return idbKeyval.get('drafts')
-    //   .then(val => {
-    //     const index = this.drafts.findIndex(d => d.id === parseInt(id, 10));
-    //     console.log(id, this.drafts, index);
-    //     return this.drafts[index];
-    //   });
+  getDrafts(): Observable<Draft[]> {
+    return Observable
+      .fromPromise(db.getItem('drafts'))
+      .map((drafts: Draft[]) => drafts === null ? [] : drafts);
   }
 
-  getDrafts() {
-    return Observable.fromPromise(db.getItem('drafts'));
+  saveDrafts(drafts): Observable<Draft[]> {
+    return Observable.fromPromise(db.setItem('drafts', drafts));
   }
 
-  saveDraft(draft) {
-    const index = this.drafts.findIndex(d => d.id === draft.id);
-    if (index === -1) {
-      this.drafts.unshift(draft);
-    } else {
-      this.drafts[index] = draft;
-    }
-    return this.drafts;
+  clearAllDrafts(): void {
+    Observable.fromPromise(db.clear())
+      .subscribe(() => console.info('The database has been cleared.'));
   }
 
-  deleteDraft(id) {
-    this.drafts = this.drafts.filter(draft => draft.id !== id);
-    return this.drafts;
+  getDraft(id: number): Observable<Draft> {
+    return this.getDrafts()
+      .map((draftsArr: Draft[]) => draftsArr.filter(d => d.id === id))
+      .map(d => d[0]);
+  }
+
+  saveDraft(draft: Draft): Observable<Draft[]> {
+    return this.getDrafts()
+      .map((drafts: Draft[]) => {
+        const index = drafts.findIndex((d: Draft) => d.id === draft.id);
+        console.log(index);
+        if (index === -1) {
+          drafts.unshift(draft);
+        } else {
+          drafts[index] = draft;
+        }
+        return drafts;
+      })
+      .map((drafts: Draft[]) => this.saveDrafts(drafts))
+      .mergeAll();
+  }
+
+  deleteDraft(id: number): Observable<Draft[]> {
+    return this.getDrafts()
+      .map((drafts: Draft[]) => drafts.filter(draft => draft.id !== id))
+      .map((drafts: Draft[]) => this.saveDrafts(drafts))
+      .mergeAll();
   }
 }

@@ -22,6 +22,6 @@ export class DraftslistComponent implements OnInit {
   }
 
   deleteDraft(id) {
-    this.drafts = this.draftsService.deleteDraft(id);
+    this.draftsService.deleteDraft(id).subscribe(drafts => this.drafts = drafts);
   }
 }

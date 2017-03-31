@@ -3,12 +3,14 @@
   position: absolute;
   bottom: .3em;
   right: 1em;
+  font-size: .8rem;
 }
 
 a {
   text-decoration: none;
   color: #aaa;
   opacity: .6;
+  cursor: pointer;
 }
 
 a:hover {
