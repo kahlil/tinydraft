@@ -2,7 +2,11 @@
   [style.xs]="{ 'display': 'none' }"
   [style.sm]="{ 'display': 'none' }">
 </app-title>
-<textarea class="p2" [(ngModel)]="draft.text"></textarea>
-<div class="right-align">
-  <button class="save-draft" (click)="saveDraft()">save</button>
+
+<div class="editor">
+  <span class="close-draft" (click)="closeDraft()">&times;</span>
+  <textarea class="p2" [(ngModel)]="draft.text" fz-elastic></textarea>
+  <div class="right-align">
+    <button class="save-draft" (click)="saveDraft()">save</button>
+  </div>
 </div>

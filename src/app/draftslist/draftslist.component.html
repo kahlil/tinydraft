@@ -6,6 +6,8 @@
   fxLayout.sm="column"
   fxLayout.xs="column">
   <app-draft class="draft rounded"
+    [style.sm]="{ 'width': '100%' }"
+    [style.xs]="{ 'width': '100%' }"
     (deleteDraftClick)="deleteDraft($event)"
     *ngFor="let draft of drafts"
     [draft]="draft"

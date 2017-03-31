@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DraftsService } from '../drafts.service';
 
@@ -25,10 +25,14 @@ export class EditorComponent implements OnInit {
       this.draftsService.saveDraft(this.draft)
         .subscribe((d) => {
           console.log(d);
-          this.router.navigateByUrl('/')
+          this.router.navigateByUrl('/');
         });
     } else {
       this.router.navigateByUrl('/');
     }
+  }
+
+  closeDraft() {
+    this.saveDraft();
   }
 }

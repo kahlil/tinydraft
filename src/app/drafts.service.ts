@@ -10,8 +10,7 @@ import 'rxjs/add/operator/mergeAll';
 @Injectable()
 export class DraftsService {
   getDrafts(): Observable<Draft[]> {
-    return Observable
-      .fromPromise(db.getItem('drafts'))
+    return Observable.fromPromise(db.getItem('drafts'))
       .map((drafts: Draft[]) => drafts === null ? [] : drafts);
   }
 

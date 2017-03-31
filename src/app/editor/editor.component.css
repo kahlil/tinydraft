@@ -1,6 +1,18 @@
+.editor {
+  position: relative;
+}
+
+.close-draft {
+  position: absolute;
+  font-size: 2rem;
+  color: #07b6ff;
+  padding: .8rem 0 0 .8rem;
+  cursor: pointer;
+}
+
 textarea {
-  min-height: 250px;
-  border: 1px solid  #07b6ff;
+  padding-top: 2.8rem;
+  border: 1px solid #07b6ff;
   border-top: 0;
   border-left: 0;
   border-right: 0;
@@ -9,9 +21,17 @@ textarea {
   width: 100%;
 }
 
+textarea:focus {
+  outline: none;
+}
+
 .save-draft {
   text-align: center;
   display: inline-block;
   background-color: #07b6ff;
   border: none;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
+
+

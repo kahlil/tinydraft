@@ -14,6 +14,7 @@ import { tinydraftRoutes } from './app.routes';
 import { EditorComponent } from './editor/editor.component';
 import { DraftResolve, EmptyDraftResolve, DraftsListResolve } from './drafts.resolve';
 import { DraftsService } from './drafts.service';
+import { ElasticModule } from 'angular2-elastic';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,7 @@ import { DraftsService } from './drafts.service';
     HttpModule,
     RouterModule.forRoot(tinydraftRoutes),
     FlexLayoutModule,
+    ElasticModule,
   ],
   providers: [
     DraftResolve,
