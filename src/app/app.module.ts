@@ -12,9 +12,14 @@ import { DraftActionsComponent } from './draft-actions/draft-actions.component';
 import { TitleComponent } from './title/title.component';
 import { tinydraftRoutes } from './app.routes';
 import { EditorComponent } from './editor/editor.component';
-import { DraftResolve, EmptyDraftResolve, DraftsListResolve } from './drafts.resolve';
 import { DraftsService } from './drafts.service';
 import { ElasticModule } from 'angular2-elastic';
+import {
+  DraftResolve,
+  FavedDraftsResolve,
+  EmptyDraftResolve,
+  DraftsListResolve,
+} from './drafts.resolve';
 
 @NgModule({
   declarations: [
@@ -38,6 +43,7 @@ import { ElasticModule } from 'angular2-elastic';
     DraftsListResolve,
     EmptyDraftResolve,
     DraftsService,
+    FavedDraftsResolve,
   ],
   bootstrap: [AppComponent]
 })

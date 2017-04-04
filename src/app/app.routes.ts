@@ -1,6 +1,12 @@
 import { DraftslistComponent } from './draftslist/draftslist.component';
+import { DraftComponent } from './draft/draft.component';
 import { EditorComponent } from './editor/editor.component';
-import { DraftResolve, EmptyDraftResolve, DraftsListResolve } from './drafts.resolve';
+import {
+  DraftResolve,
+  FavedDraftsResolve,
+  EmptyDraftResolve,
+  DraftsListResolve,
+} from './drafts.resolve';
 
 export const tinydraftRoutes = [
   {
@@ -11,10 +17,24 @@ export const tinydraftRoutes = [
     }
   },
   {
+    path: 'faved',
+    component: DraftslistComponent,
+    resolve: {
+      drafts: FavedDraftsResolve
+    }
+  },
+  {
     path: 'new',
     component: EditorComponent,
     resolve: {
       draft: EmptyDraftResolve
+    }
+  },
+  {
+    path: 'draft/:id',
+    component: DraftComponent,
+    resolve: {
+      draft: DraftResolve,
     }
   },
   {
@@ -23,5 +43,5 @@ export const tinydraftRoutes = [
     resolve: {
       draft: DraftResolve,
     }
-  },
+  }
 ];

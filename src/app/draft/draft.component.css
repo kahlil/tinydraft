@@ -2,8 +2,10 @@
   display: block;
   background-color: #383838;
   position: relative;
-  width: 25%;
+  min-width: 25%;
   border: .5em solid #222;
+  margin: 0 auto;
+  word-wrap: break-word;
 }
 
 p:first-child {
@@ -26,6 +28,7 @@ p:last-child {
   width: 100%;
   border: 1px solid #383838;
 }
+
 .inner-container:hover {
   border: 1px solid #07b6ff;
 }

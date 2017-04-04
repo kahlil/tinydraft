@@ -14,6 +14,11 @@ export class DraftsService {
       .map((drafts: Draft[]) => drafts === null ? [] : drafts);
   }
 
+  getFavedDrafts() {
+    return this.getDrafts()
+      .map((drafts: Draft[]) => drafts.filter(d => d.faved));
+  }
+
   saveDrafts(drafts): Observable<Draft[]> {
     return Observable.fromPromise(db.setItem('drafts', drafts));
   }
@@ -33,7 +38,6 @@ export class DraftsService {
     return this.getDrafts()
       .map((drafts: Draft[]) => {
         const index = drafts.findIndex((d: Draft) => d.id === draft.id);
-        console.log(index);
         if (index === -1) {
           drafts.unshift(draft);
         } else {

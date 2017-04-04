@@ -1,7 +1,7 @@
 <div class="inner-container">
   <div class="draft-text"
-    (click)="editDraft(draft.id)">
-    {{ text }}
+    (click)="viewDraft(draft.id)">
+    {{ draft.text }}
   </div>
   <app-draft-actions
     [draft]="draft"

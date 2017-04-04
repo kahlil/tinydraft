@@ -6,3 +6,7 @@
 .drafts-container {
   padding: .5em;
 }
+
+.draft-container {
+  width: 25%;
+}

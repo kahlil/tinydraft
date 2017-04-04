@@ -10,6 +10,18 @@
   cursor: pointer;
 }
 
+.save-draft {
+  text-align: center;
+  display: inline-block;
+  background-color: #07b6ff;
+  border: none;
+  font-size: .8rem;
+  line-height: 1.2rem;
+  position: absolute;
+  top: .8rem;
+  right: .8rem;
+}
+
 textarea {
   padding-top: 2.8rem;
   border: 1px solid #07b6ff;
@@ -23,15 +35,6 @@ textarea {
 
 textarea:focus {
   outline: none;
-}
-
-.save-draft {
-  text-align: center;
-  display: inline-block;
-  background-color: #07b6ff;
-  border: none;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }
 
 

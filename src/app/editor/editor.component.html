@@ -5,8 +5,6 @@
 
 <div class="editor">
   <span class="close-draft" (click)="closeDraft()">&times;</span>
+  <button class="save-draft" (click)="saveDraft()">save</button>
   <textarea class="p2" [(ngModel)]="draft.text" fz-elastic></textarea>
-  <div class="right-align">
-    <button class="save-draft" (click)="saveDraft()">save</button>
-  </div>
 </div>

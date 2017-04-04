@@ -13,6 +13,15 @@ export class DraftsListResolve {
 }
 
 @Injectable()
+export class FavedDraftsResolve {
+  constructor(private draftsService: DraftsService) {}
+
+  resolve() {
+    return this.draftsService.getFavedDrafts();
+  }
+}
+
+@Injectable()
 export class DraftResolve implements Resolve<any> {
   constructor(private draftsService: DraftsService) {}
 

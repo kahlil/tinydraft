@@ -1,13 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { CSS } from './draftslist.component.styles';
 import { DraftsService } from '../drafts.service';
 
 @Component({
   selector: 'app-draftslist',
   templateUrl: './draftslist.component.html',
-  // styleUrls: ['./draftslist.component.css'],
-  styles: [CSS],
+  styleUrls: ['./draftslist.component.css'],
 })
 export class DraftslistComponent implements OnInit {
   drafts;

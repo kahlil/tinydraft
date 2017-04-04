@@ -2,8 +2,15 @@
   tinydraft
 </h1>
 
-<div class="drafts-actions">
-  <a [routerLink]="['/new']">
-    new draft
-  </a>
+<div class="drafts-actions table">
+  <div class="table-cell">
+    <a [routerLink]="['/new']">
+      new
+    </a>
+  </div>
+  <div class="table-cell">
+    <a [routerLink]="['/faved']">
+      ★
+    </a>
+  </div>
 </div>

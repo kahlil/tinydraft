@@ -24,7 +24,6 @@ export class EditorComponent implements OnInit {
     if (this.draft.text !== '') {
       this.draftsService.saveDraft(this.draft)
         .subscribe((d) => {
-          console.log(d);
           this.router.navigateByUrl('/');
         });
     } else {

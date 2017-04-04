@@ -15,13 +15,17 @@
 }
 
 .drafts-actions {
-  text-align: center;
   font-weight: 300;
   padding-bottom: 1rem;
+  margin: 0 auto;
 }
 
 .drafts-actions a {
   color: hotpink;
   border-bottom: 1px solid hotpink;
   text-align: center;
+}
+
+.table-cell {
+  padding: 0 .5rem;
 }

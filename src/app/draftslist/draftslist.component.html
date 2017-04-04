@@ -5,12 +5,14 @@
   fxLayout="row"
   fxLayout.sm="column"
   fxLayout.xs="column">
-  <app-draft class="draft rounded"
-    [style.sm]="{ 'width': '100%' }"
-    [style.xs]="{ 'width': '100%' }"
-    (deleteDraftClick)="deleteDraft($event)"
+  <div class="draft-container"
     *ngFor="let draft of drafts"
-    [draft]="draft"
-    fxFlex>
-  </app-draft>
+    [ngStyle.sm]="{ 'width': '100%' }"
+    [ngStyle.xs]="{ 'width': '100%' }"
+    fxflex>
+    <app-draft class="draft rounded"
+      (deleteDraftClick)="deleteDraft($event)"
+      [draft]="draft">
+    </app-draft>
+  </div>
 </div>
