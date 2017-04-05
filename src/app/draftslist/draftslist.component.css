@@ -10,3 +10,13 @@
 .draft-container {
   width: 25%;
 }
+
+.no-drafts {
+  margin: 3rem auto;
+  width: 70%;
+  text-align: center;
+  color: #4a4a4a;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  letter-spacing: 0px;
+}
