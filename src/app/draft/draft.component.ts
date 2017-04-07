@@ -1,6 +1,8 @@
 import { Component, Input, Output, OnInit, EventEmitter, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DraftsService } from '../drafts.service';
+import snarkdown from 'snarkdown';
+import htmlTruncate from 'html-truncate';
 import { CSS } from './draft.component.styles';
 
 @Component({
@@ -11,8 +13,6 @@ import { CSS } from './draft.component.styles';
 export class DraftComponent implements OnInit {
   @Input() draft;
   @Output() deleteDraftClick: EventEmitter<any> = new EventEmitter();
-  @HostBinding('attr.style.xs') xs = { 'width': '100%' };
-  @HostBinding('attr.style.sm') sm = { 'width': '100%' };
 
   constructor(
     private route: ActivatedRoute,
@@ -22,9 +22,10 @@ export class DraftComponent implements OnInit {
 
   ngOnInit() {
     if (this.draft) {
-      this.draft.text = this.shortenDraftText(this.draft.text);
+      this.draft.text = htmlTruncate(snarkdown(this.draft.text), 100);
     } else {
       this.draft = this.route.snapshot.data['draft'];
+      this.draft.text = snarkdown(this.draft.text);
     }
   }
 

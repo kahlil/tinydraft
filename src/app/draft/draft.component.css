@@ -8,6 +8,10 @@
   word-wrap: break-word;
 }
 
+h1:first-child {
+  text-transform: uppercase;
+}
+
 p:first-child {
   margin-top: 0;
 }
@@ -17,7 +21,8 @@ p:last-child {
 }
 
 .draft-text {
-  margin-bottom: 1rem;
+  padding-top: .5rem;
+  margin-bottom: .5rem;
   cursor: pointer;
 }
 
@@ -32,3 +37,24 @@ p:last-child {
 .inner-container:hover {
   border: 1px solid #07b6ff;
 }
+
+:host >>> h1,
+:host >>> h2,
+:host >>> h3,
+:host >>> h4,
+:host >>> h5,
+:host >>> h6 {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+:host >>> h1:first-child,
+:host >>> h2:first-child,
+:host >>> h3:first-child,
+:host >>> h4:first-child,
+:host >>> h5:first-child,
+:host >>> h6:first-child {
+  text-transform: uppercase;
+}
+
+:host >>> br {}

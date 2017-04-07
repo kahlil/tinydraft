@@ -1,22 +1,13 @@
 * { box-sizing: border-box; }
 
-body {
+html {
   font-family: "Source Code Pro", "Consolas", "Fira Code", monospace;
-  font-size: 0.9rem;
-  line-height: 1.3rem;
+  /*font-size: 0.9rem;*/
+  /*line-height: 1.3rem;*/
   min-height: 100vh;
   color: #ddd;
-  /*background-color: #666;
-  background-image: repeating-linear-gradient(135deg, transparent, transparent 10px, rgba(255,255,255,.1) 10px, rgba(255,255,255,.1) 20px);*/
-  background: #79cdec; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #79cdec , #B06AB3); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #79cdec , #B06AB3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-  background: #bdc3c7; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to bottom, #bdc3c7 , #2c3e50); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to bottom, #bdc3c7 , #2c3e50); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
   background: #222; /* fallback for old browsers */
+  padding-top: 3px;
 }
 
 a {
