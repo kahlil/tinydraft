@@ -2,8 +2,7 @@
 
 html {
   font-family: "Source Code Pro", "Consolas", "Fira Code", monospace;
-  /*font-size: 0.9rem;*/
-  /*line-height: 1.3rem;*/
+  font-weight: 400;
   min-height: 100vh;
   color: #ddd;
   background: #222; /* fallback for old browsers */
@@ -13,6 +12,11 @@ html {
 a {
   text-decoration: none;
   color: #ccc;
+}
+
+strong, b, .bold,
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
 }
 
 .ribbon {
