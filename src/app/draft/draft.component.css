@@ -21,7 +21,6 @@ p:last-child {
 }
 
 .draft-text {
-  padding-top: .5rem;
   margin-bottom: .5rem;
   cursor: pointer;
 }
@@ -54,7 +53,12 @@ p:last-child {
 :host >>> h4:first-child,
 :host >>> h5:first-child,
 :host >>> h6:first-child {
+  margin-top: 0;
   text-transform: uppercase;
 }
 
-:host >>> br {}
+:host >>> br {
+  content: 'A';
+  display: block;
+  margin-bottom: 0.5em;
+}
