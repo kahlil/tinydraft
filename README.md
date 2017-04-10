@@ -1,3 +1,3 @@
-# Tinydraft
+# tinydraft
 
 _soon_
