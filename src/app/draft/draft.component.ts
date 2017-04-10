@@ -53,7 +53,7 @@ export class DraftComponent implements OnInit {
     this.deleteDraftClick.emit(id);
   }
 
-  tweetDraft(id) {
+  tweetDraft() {
     const strippedText = this.draft.text.replace(/<[^>]+>/ig, '');
     window.open(
       `https://twitter.com/intent/tweet?text=${encodeURIComponent(strippedText)}`,
