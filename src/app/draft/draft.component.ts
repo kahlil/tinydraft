@@ -52,4 +52,13 @@ export class DraftComponent implements OnInit {
   deleteDraft(id) {
     this.deleteDraftClick.emit(id);
   }
+
+  tweetDraft() {
+    const strippedText = this.draft.text.replace(/<[^>]+>/ig, '');
+    window.open(
+      `https://twitter.com/intent/tweet?text=${encodeURIComponent(strippedText)}`,
+      'tinydraft',
+      'width=600,height=300'
+    );
+  }
 }

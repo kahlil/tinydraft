@@ -5,9 +5,9 @@
   <li class="inline-block">
     <a (click)="deleteDraft(draft.id)">delete</a>
   </li>
-  <!--<li class="inline-block">
-    <a href="">tweet</a>
-  </li>-->
+  <li class="inline-block">
+    <a (click)="tweetDraft(draft.id)">tweet</a>
+  </li>
   <li class="inline-block">
     <a class="fav"
       [ngClass]="{ faved: draft.faved }"

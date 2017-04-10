@@ -9,6 +9,7 @@ export class DraftActionsComponent {
   @Input() draft;
   @Output() favDraftClick = new EventEmitter();
   @Output() deleteDraftClick: EventEmitter<any> = new EventEmitter();
+  @Output() tweetDraftClick = new EventEmitter();
 
   favDraft(id) {
     return this.favDraftClick.emit();
@@ -16,5 +17,9 @@ export class DraftActionsComponent {
 
   deleteDraft(id: any) {
     return this.deleteDraftClick.emit(id);
+  }
+
+  tweetDraft(id) {
+    return this.tweetDraftClick.emit();
   }
 }
