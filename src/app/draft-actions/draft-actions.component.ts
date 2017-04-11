@@ -16,7 +16,9 @@ export class DraftActionsComponent {
   }
 
   deleteDraft(id: any) {
-    return this.deleteDraftClick.emit(id);
+    if (window.confirm('Are you sure that you want to delete this draft?')) {
+      return this.deleteDraftClick.emit(id);
+    }
   }
 
   tweetDraft(id) {
