@@ -1,0 +1,14 @@
+{
+  "name": "tinydraft",
+  "icons": [
+    {
+      "src": "assets/img/tinydraft.png",
+      "sizes": "180x180",
+      "type": "image/png",
+      "density": 4.0
+    }
+  ],
+  "start_url": "index.html",
+  "display": "standalone",
+  "orientation": "portrait"
+}
