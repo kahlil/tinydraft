@@ -9,6 +9,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "offline",
         "assets",
         "favicon.ico"
       ],

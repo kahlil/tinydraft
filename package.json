@@ -9,7 +9,8 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e"
+    "e2e": "ng e2e",
+    "copy-upup": "cpy node_modules/upup/dist/upup.min.js src/offline"
   },
   "private": true,
   "dependencies": {
@@ -26,6 +27,7 @@
     "angular2-elastic": "^0.13.0",
     "basscss": "^8.0.2",
     "core-js": "^2.4.1",
+    "cpy-cli": "^1.0.1",
     "html-truncate": "^1.2.2",
     "localforage": "^1.5.0",
     "markdown-it": "^8.3.1",
@@ -35,6 +37,7 @@
     "rxjs": "^5.1.0",
     "seamless-immutable": "^7.0.1",
     "snarkdown": "^1.2.2",
+    "upup": "^0.3.0",
     "zone.js": "^0.8.5"
   },
   "devDependencies": {
