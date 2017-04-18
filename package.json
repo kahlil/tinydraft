@@ -10,7 +10,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "copy-upup": "cpy node_modules/upup/dist/upup.min.js src/offline"
+    "copy-upup": "cpy node_modules/upup/dist/upup.min.js node_modules/upup/dist/upup.sw.min.js src"
   },
   "private": true,
   "dependencies": {

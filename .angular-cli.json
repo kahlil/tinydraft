@@ -10,6 +10,7 @@
       "outDir": "dist",
       "assets": [
         "upup.min.js",
+        "upup.sw.min.js",
         "assets",
         "favicon.ico"
       ],
