@@ -9,7 +9,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
-        "offline",
+        "upup.min.js",
         "assets",
         "favicon.ico"
       ],
