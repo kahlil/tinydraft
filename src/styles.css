@@ -50,3 +50,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+.draft-text a {
+  border-bottom: 1px solid #ddd;
+}
