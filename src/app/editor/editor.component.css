@@ -6,12 +6,14 @@
   position: absolute;
   font-size: 2rem;
   color: #07b6ff;
-  padding: .2rem 0 0 .8rem;
+  padding: .5rem 0 0 .8rem;
   cursor: pointer;
 }
 
 .save-draft {
   text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
   display: inline-block;
   background-color: #07b6ff;
   border: none;
