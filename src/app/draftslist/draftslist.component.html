@@ -5,18 +5,22 @@
   fxLayout="row"
   fxLayout.sm="column"
   fxLayout.xs="column">
+
   <div class="draft-container"
     *ngFor="let draft of drafts"
     [ngStyle.sm]="{ 'width': '100%' }"
     [ngStyle.xs]="{ 'width': '100%' }"
     fxflex>
-    <app-draft class="draft rounded"
+
+    <app-draft class="draft"
       (deleteDraftClick)="deleteDraft($event)"
       [draft]="draft">
     </app-draft>
+
   </div>
 
   <div class="no-drafts" *ngIf="drafts.length === 0">
     No drafts yet.
   </div>
+
 </div>

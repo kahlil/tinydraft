@@ -2,7 +2,7 @@
   display: block;
   background-color: #383838;
   position: relative;
-  min-width: 25%;
+  min-width: 30%;
   border: .5em solid #222;
   margin: 0 auto;
   word-wrap: break-word;
@@ -60,5 +60,5 @@ p:last-child {
 :host >>> br {
   content: 'A';
   display: block;
-  margin-bottom: 0.5em;
+  margin-bottom: 1em;
 }

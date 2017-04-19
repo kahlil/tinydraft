@@ -11,6 +11,7 @@
       "assets": [
         "upup.min.js",
         "upup.sw.min.js",
+        "manifest.json",
         "assets",
         "favicon.ico"
       ],

@@ -23,6 +23,8 @@ html {
   color: #ddd;
   background: #222; /* fallback for old browsers */
   padding-top: 3px;
+  font-size: 20px;
+  line-height: 160%;
 }
 
 a {
