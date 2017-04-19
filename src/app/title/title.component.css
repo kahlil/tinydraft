@@ -22,8 +22,11 @@
 
 .drafts-actions a {
   color: hotpink;
-  border-bottom: 1px solid hotpink;
   text-align: center;
+}
+
+.drafts-actions a:hover {
+  border-bottom: 1px solid hotpink;
 }
 
 .table-cell {
