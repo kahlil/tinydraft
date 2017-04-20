@@ -1,7 +1,7 @@
 <div class="inner-container">
   <div class="draft-text"
     (click)="viewDraft(draft.id)"
-    [innerHTML]="draft.text">
+    [innerHTML]="displayedText">
   </div>
   <app-draft-actions
     [draft]="draft"

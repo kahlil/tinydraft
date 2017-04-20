@@ -13,6 +13,7 @@ import { CSS } from './draft.component.styles';
 export class DraftComponent implements OnInit {
   @Input() draft;
   @Output() deleteDraftClick: EventEmitter<any> = new EventEmitter();
+  displayedText = '';
 
   constructor(
     private route: ActivatedRoute,
@@ -22,10 +23,10 @@ export class DraftComponent implements OnInit {
 
   ngOnInit() {
     if (this.draft) {
-      this.draft.text = htmlTruncate(snarkdown(this.draft.text), 100);
+      this.displayedText = htmlTruncate(snarkdown(this.draft.text), 100);
     } else {
       this.draft = this.route.snapshot.data['draft'];
-      this.draft.text = snarkdown(this.draft.text);
+      this.displayedText = snarkdown(this.draft.text);
     }
   }
 
