@@ -16,8 +16,7 @@ Here is a list of features I plan to implement:
 
 This app is being built with: 
 
-- Angular CLI
-- Angular 
+- Angular with Angular CLI 
 - [upup](https://www.talater.com/upup/) for offline support
 - [Netflify](https://netlify.com) for hosting and free HTTPS support 
 
