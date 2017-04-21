@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Resolve, ActivatedRouteSnapshot } from '@angular/router';
 import { DraftsService } from './drafts.service';
-import { Draft } from './app.interface';
+import { Draft } from '../app.interface';
 
 @Injectable()
 export class DraftsListResolve {

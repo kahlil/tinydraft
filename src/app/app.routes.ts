@@ -6,7 +6,7 @@ import {
   FavedDraftsResolve,
   EmptyDraftResolve,
   DraftsListResolve,
-} from './drafts.resolve';
+} from './service/drafts.resolve';
 
 export const tinydraftRoutes = [
   {

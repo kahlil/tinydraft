@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
-import { Draft } from './app.interface';
+import { Draft } from '../app.interface';
 import db from 'localforage';
 import 'rxjs/add/observable/fromPromise';
 import 'rxjs/add/operator/mergeAll';

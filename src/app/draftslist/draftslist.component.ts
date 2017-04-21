@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { DraftsService } from '../drafts.service';
+import { DraftsService } from '../service/drafts.service';
 
 @Component({
   selector: 'app-draftslist',

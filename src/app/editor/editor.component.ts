@@ -1,6 +1,6 @@
 import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DraftsService } from '../drafts.service';
+import { DraftsService } from '../service/drafts.service';
 
 @Component({
   selector: 'app-editor',

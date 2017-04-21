@@ -1,6 +1,6 @@
 import { Component, Input, Output, OnInit, EventEmitter, HostBinding } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { DraftsService } from '../drafts.service';
+import { DraftsService } from '../service/drafts.service';
 import snarkdown from 'snarkdown';
 import htmlTruncate from 'html-truncate';
 import { CSS } from './draft.component.styles';

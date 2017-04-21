@@ -12,14 +12,14 @@ import { DraftActionsComponent } from './draft-actions/draft-actions.component';
 import { TitleComponent } from './title/title.component';
 import { tinydraftRoutes } from './app.routes';
 import { EditorComponent } from './editor/editor.component';
-import { DraftsService } from './drafts.service';
+import { DraftsService } from './service/drafts.service';
 import { ElasticModule } from 'angular2-elastic';
 import {
   DraftResolve,
   FavedDraftsResolve,
   EmptyDraftResolve,
   DraftsListResolve,
-} from './drafts.resolve';
+} from './service/drafts.resolve';
 
 @NgModule({
   declarations: [
