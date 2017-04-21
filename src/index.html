@@ -18,23 +18,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico?v=3">
 </head>
+
 <body>
+
   <app-root>Loading...</app-root>
+
+  <script src="upup.min.js"></script>
+  <script>
+    UpUp.start({
+      'cache-version': 'v10',
+      'content-url': 'offline.html',
+      'assets': [
+        'assets/img/tinydraft.png',
+        'inline.bundle.js',
+        'polyfills.bundle.js',
+        'vendor.bundle.js',
+        'main.bundle.js',
+        'styles.bundle.css',
+        'favicon.ico'
+      ]
+    });
+  </script>
+
 </body>
-<script src="upup.min.js"></script>
-<script>
-  UpUp.start({
-    'cache-version': 'v8',
-    'content-url': 'offline.html',
-    'assets': [
-      'assets/img/tinydraft.png',
-      'inline.bundle.js',
-      'polyfills.bundle.js',
-      'vendor.bundle.js',
-      'main.bundle.js',
-      'styles.bundle.css',
-      'favicon.ico'
-    ]
-  });
-</script>
+
 </html>
