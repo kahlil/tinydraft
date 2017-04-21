@@ -9,6 +9,7 @@
       "root": "src",
       "outDir": "dist",
       "assets": [
+        "offline.html",
         "upup.min.js",
         "upup.sw.min.js",
         "manifest.json",
