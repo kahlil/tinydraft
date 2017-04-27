@@ -33,7 +33,7 @@ export class EditorComponent implements OnInit {
     // Save and close and save draft on escape key event.
     this.escKey$ = this.keyup$
       .filter((e: KeyboardEvent) => e.code === 'Escape')
-      .subscribe(() => this.saveDraft());
+      .subscribe(() => this.router.navigateByUrl('/'));
     // Character count streams.
     this.characterCount = this.text$
       .map((text: string) => text.length)
