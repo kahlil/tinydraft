@@ -27,6 +27,7 @@
 textarea {
   border-radius: 0;
   padding-top: 3rem;
+  padding-bottom: 1.2rem;
   border: 1px solid #07b6ff;
   border-top: 0;
   border-left: 0;
@@ -40,4 +41,11 @@ textarea:focus {
   outline: none;
 }
 
-
+.character-count {
+  position: absolute;
+  top: .8rem;
+  right: 4rem;
+  display: inline-block;
+  font-size: .8rem;
+  color: #636363;
+}

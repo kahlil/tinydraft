@@ -1,6 +1,7 @@
 import { DraftslistComponent } from './draftslist/draftslist.component';
 import { DraftComponent } from './draft/draft.component';
 import { EditorComponent } from './editor/editor.component';
+import { DraftDetailComponent } from './draft-detail/draft-detail.component';
 import {
   DraftResolve,
   FavedDraftsResolve,
@@ -32,7 +33,7 @@ export const tinydraftRoutes = [
   },
   {
     path: 'draft/:id',
-    component: DraftComponent,
+    component: DraftDetailComponent,
     resolve: {
       draft: DraftResolve,
     }
