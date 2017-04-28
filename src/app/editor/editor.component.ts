@@ -52,6 +52,6 @@ export class EditorComponent implements OnInit {
   }
 
   closeDraft() {
-    this.saveDraft();
+    this.router.navigateByUrl('/');
   }
 }
