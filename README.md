@@ -1,5 +1,7 @@
 # tinydraft
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kahlil/tinydraft.svg)](https://greenkeeper.io/)
+
 [tinydraft](https://tinydraft.net) is a small progressive web app that allows you to save small drafts locally in your browser. It allows you to tweet those drafts via [Web Intents](https://dev.twitter.com/web/intents).
 
 You can save it to your home screen on your phone and it will look like a native app.
